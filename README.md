@@ -6,7 +6,7 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [Strawberry Chainsaw]
 
 
 ### Team Members
