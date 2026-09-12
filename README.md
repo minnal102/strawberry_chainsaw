@@ -10,88 +10,64 @@
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Minna Mary - Christ College of Engineering Irinjalakuda
+- Member 2: Rohit K S - Christ College of Engineering Irinjalakuda
 
 ### Project Description
-[2-3 lines about what your project does]
+A chatbot to help (not really) you escape scenarios where fictional or mythical characters are posing some kind of threat to you.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Danger posed by fictional characters to us.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+We have made this chatbot which advices you on how to deal with the scenarios.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Python, HTML5, CSS3, Vanilla JavaScript
+- Flask, Flask-CORS, Google GenAI SDK (`google-genai`)
+- Os,flask
+- Render (Backend API Hosting), GitHub Pages (Frontend Hosting), Gunicorn (Production Server), Git/GitHub
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+```bash
+# Clone the repository
+git clone [https://github.com/minnal102/strawberry_chainsaw.git](https://github.com/minnal102/strawberry_chainsaw.git)
+cd strawberry_chainsaw
 
-# Run
-[commands]
+# Install the required Python dependencies
+pip install -r requirements.txt
+
+# Set up your environment variable for the Gemini API
+# On Windows: set GEMINI_API_KEY=your_api_key_here
+# On Mac/Linux: export GEMINI_API_KEY=your_api_key_here
 
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+# Screenshots 
+https://drive.google.com/file/d/1zgJeQgTjcXv27br2TRE0jSukkc2eqy-B/view?usp=drive_link
+Starting screen of the chatbot
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+https://drive.google.com/file/d/16OcVgPwXf7oOqOclOlEsRwAEeY9ReGrH/view?usp=drive_link
+Screenshot shows the first prompt and response
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+https://drive.google.com/file/d/1zgJeQgTjcXv27br2TRE0jSukkc2eqy-B/view?usp=drive_link
+Screenshot shows 2nd prompt and reply
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://drive.google.com/file/d/1Rxp3h-59n8KOPtI0MBikLS7xLf6qbaEw/view?usp=drive_link
+Use of the chatbot is demonstrated in this video
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Minna Mary: Building the chatbot
+- Rohit K S: Deploying the chatbot, writing read me
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
