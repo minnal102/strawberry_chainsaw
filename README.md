@@ -2,7 +2,7 @@
 
 
 
-# [Project Name] 🎯
+# [Mythic Muthappan] 🎯
 
 
 ## Basic Details
