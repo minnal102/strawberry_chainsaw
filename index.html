@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythic Muthappan AI</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🔮 Mythic Muthappan AI</header>
+
+<div id="chat-container">
+    <div id="messages"></div>
+    <div class="input-area">
+        <input id="input" type="text" placeholder="Describe the monster or problem..." autocomplete="off">
+        <button id="send">Send</button>
+    </div>
+</div>
+
+<script>
+const input = document.getElementById("input");
+const sendBtn = document.getElementById("send");
+const messages = document.getElementById("messages");
+
+function addMessage(text, type) {
+    const wrapper = document.createElement("div");
+    wrapper.className = `message-wrapper ${type}`;
+
+    const label = document.createElement("span");
+    label.className = "sender-label";
+    label.textContent = type === "user" ? "You" : "Mythic Muthappan";
+
+    const msg = document.createElement("div");
+    msg.className = "message";
+    msg.textContent = text;
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(msg);
+    messages.appendChild(wrapper);
+    
+    messages.scrollTop = messages.scrollHeight;
+}
+
+async function sendToGemini(text) {
+    try {
+        const response = await fetch("http://localhost:5000/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: text })
+        });
+        const data = await response.json();
+        addMessage(data.response || "No response received.", "bot");
+    } catch (error) {
+        addMessage("🔮 Error connecting to Python backend. Ensure server.py is running on localhost:5000!", "bot");
+    }
+}
+
+function handleSend() {
+    const text = input.value.trim();
+    if (!text) return;
+    addMessage(text, "user");
+    input.value = "";
+    sendToGemini(text);
+}
+
+sendBtn.addEventListener("click", handleSend);
+input.addEventListener("keydown", (e) => { if (e.key === "Enter") handleSend(); });
+
+addMessage("🔮 Namaskaram mone! 🏹🔥 Mythic Muthappan is ONLINE. Bring me mythical monsters, superheroes, or video game bosses — njan paranj tharaam correct advice! 🐉💥 Enthaa ippo ninte presnam??", "bot");
+</script>
+
+</body>
+</html>
